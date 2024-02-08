@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    background-color: rgb(249, 245, 228);
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+
+.search-bar > form {
+    width: 100%;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+}
+
+    .search-bar > form > button {
+        border-radius: inherit;
+        flex-basis: 20%;
+        border: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: #4c4cff;
+        font-weight: bold;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+input[type="text"] {
+    border-radius: inherit;
+    border: 0;
+    position: relative;
+    z-index: 100;
+    flex-grow: 1;
+    padding: 1rem 2rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+    input[type="text"]:focus,
+    input[type="text"]:hover {
+        position: relative;
+        z-index: 100;
+        border-radius: 0;
+        box-shadow: 0 0 2px 4px red;
+    }
+
+.search-bar > form > button:focus,
+.search-bar > form > button:hover {
+    position: relative;
+    z-index: 100;
+    border-radius: 0;
+    box-shadow: 0 0 2px 4px red;
+}
+
+.search-bar > form > button:disabled {
+    background-color: gray;
+}
+
+#Results > * {
+    word-wrap: break-word;
+}
+
+.thumbnail {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+}
