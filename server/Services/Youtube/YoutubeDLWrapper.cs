@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text.RegularExpressions;
-namespace server.Services
+namespace server.Services.Youtube
 {
     public class YoutubeDLWrapper : IYoutubeDLWrapper
     {
@@ -33,19 +33,8 @@ namespace server.Services
 
                 if (!string.IsNullOrWhiteSpace(error))
                 {
-                    // Log or handle the error
                     logger.LogError($"Error while executing yt-dlp: {error}");
                 }
-                //Regex r = new Regex(@"""([^""]+)""");
-                //var m = r.Match(output);
-                //output = m.Value.Substring(1, m.Value.Length - 2);
-                //output = webHostEnvironment.WebRootPath + "\\Videos\\" + output;
-                //if (File.Exists(output))
-                //{
-                //    string newName = Path.GetFileNameWithoutExtension(output);
-                //    string ext = Path.GetExtension(output);
-                //    System.IO.File.Move(output, webHostEnvironment.WebRootPath + "\\Videos\\" + newName + "Video" + ext);
-                //}
                 return output;
             }
         }
@@ -74,6 +63,11 @@ namespace server.Services
                 }
                 return output;
             }
+        }
+
+        public string YoutubeDownload(string Id)
+        {
+            return "jalkfsd";
         }
     }
 }
