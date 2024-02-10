@@ -1,8 +1,8 @@
 ﻿namespace server.Services.Youtube
 {
-    public interface IYoutubeDLWrapper
+    public interface IYoutubeDownloadService
     {
-        string YoutubeDownload(string Id);
+        string SetupFiles(string Id);
         string DownloadVideo(string Id);
         string DownloadAudio(string Id);
     }

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Youtube\" />
+    <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
 </Project>

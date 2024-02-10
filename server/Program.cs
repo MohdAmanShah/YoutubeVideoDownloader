@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddScoped<IYoutubeDLWrapper, YoutubeDLWrapper>();
+builder.Services.AddScoped<IYoutubeDownloadService, YoutubeDownloadService>();
 
 var app = builder.Build();
 
